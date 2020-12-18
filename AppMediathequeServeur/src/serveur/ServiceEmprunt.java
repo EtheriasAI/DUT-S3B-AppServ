@@ -3,15 +3,14 @@ package serveur;
 import java.util.ArrayList;
 import java.util.List;
 
-import application.Abonne;
+import IDocument.Document;
+import abonne.Abonne;
 
-public class ServiceReservation implements Runnable{
-
-
+public class ServiceEmprunt implements Runnable {
 	private static List<Abonne> lesAbonnes = new ArrayList<Abonne>();
 	
-	public static void setLesAbonnes(List<Abonne> lesAbonnes) {
-		ServiceReservation.lesAbonnes = lesAbonnes;
+	public static void setLesAbonnes(List<Abonne> lesAbonnes, List<Document> doc) {
+		ServiceEmprunt.lesAbonnes = lesAbonnes;
 	}
 
 	private static Abonne getAbonne(int id) {
@@ -20,7 +19,8 @@ public class ServiceReservation implements Runnable{
 				return ab;
 		return null;
 	}
-
+	
+	
 	
 	
 	@Override

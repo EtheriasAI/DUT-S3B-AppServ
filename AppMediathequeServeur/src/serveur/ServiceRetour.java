@@ -3,12 +3,13 @@ package serveur;
 import java.util.ArrayList;
 import java.util.List;
 
-import application.Abonne;
+import IDocument.Document;
+import abonne.Abonne;
 
 public class ServiceRetour implements Runnable {
 	private static List<Abonne> lesAbonnes = new ArrayList<Abonne>();
 	
-	public static void setLesAbonnes(List<Abonne> lesAbonnes) {
+	public static void setLesAbonnes(List<Abonne> lesAbonnes, List<Document> doc) {
 		ServiceRetour.lesAbonnes = lesAbonnes;
 	}
 

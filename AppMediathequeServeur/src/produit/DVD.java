@@ -1,6 +1,7 @@
 package produit;
 
-import application.Abonne;
+import IDocument.Document;
+import abonne.Abonne;
 
 public class DVD implements Document{
 	private int numero;
