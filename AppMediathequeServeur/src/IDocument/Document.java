@@ -1,6 +1,8 @@
-package produit;
+package IDocument;
 
-import application.Abonne;
+import abonne.Abonne;
+import produit.EmpruntException;
+import produit.ReservationException;
 
 public interface Document {
 	int numero();
