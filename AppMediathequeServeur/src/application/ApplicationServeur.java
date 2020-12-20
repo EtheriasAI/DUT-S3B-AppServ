@@ -24,9 +24,9 @@ public class ApplicationServeur {
 		List<Abonne> lesAbonnes = initAbonne();
 		List<Document> doc = initDocument();
 		
-		ServiceEmprunt.setLesAbonnes(lesAbonnes, doc);
-		ServiceReservation.setLesAbonnes(lesAbonnes, doc);
-		ServiceRetour.setLesAbonnes(lesAbonnes, doc);
+		ServiceEmprunt.setLesListes(lesAbonnes, doc);
+		ServiceReservation.setLesListes(lesAbonnes, doc);
+		ServiceRetour.setLesListes(lesAbonnes, doc);
 
 		new Thread(new ServeurReservation(PORTReserver)).start();
 		System.out.println("Serveur Reservation lance sur le port " + PORTReserver);
@@ -47,9 +47,9 @@ public class ApplicationServeur {
 	}
 	public static List<Document> initDocument() {
 		List<Document> doc = new ArrayList<Document>();
-		doc.add(new DVD(1));
-		doc.add(new DVD(2));
-		doc.add(new DVD(3));
+		doc.add(new DVD(1, "Le Labyrinthe", false));
+		doc.add(new DVD(2, "Avengers", false));
+		doc.add(new DVD(3, "Sex Tape", true));
 		
 		return doc;
 	}

@@ -4,13 +4,13 @@ public class AbonneClassique implements Abonne{
 	private int numero;
 	private String nom;
 	private String dateNaissance;
-	private boolean naissance;
+	private boolean naissanceBoolean;
 	
-	public AbonneClassique(int numero, String nom, String dateNaissance, Boolean naissance) {
+	public AbonneClassique(int numero, String nom, String dateNaissance, Boolean naissanceBoolean) {
 		this.numero = numero;
 		this.nom = nom;
 		this.dateNaissance = dateNaissance;
-		this.naissance = naissance;
+		this.naissanceBoolean = naissanceBoolean;
 	}
 
 
@@ -26,8 +26,8 @@ public class AbonneClassique implements Abonne{
 		return dateNaissance;
 	}
 
-	public Boolean getDateNaissanceV2() {
-		return naissance;
+	public Boolean getDateNaissanceBoolean() {
+		return naissanceBoolean;
 	}
 	
 }

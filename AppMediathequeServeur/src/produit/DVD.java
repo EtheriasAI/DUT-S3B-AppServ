@@ -6,9 +6,14 @@ import abonne.Abonne;
 public class DVD implements Document{
 	private int numero;
 	private Boolean disponibilite = true;
+	private String nom;
+	private Boolean pourAdulte;
+	
 	Abonne ab;
-	public DVD(int numero) {
+	public DVD(int numero, String nom, Boolean pourAdulte) {
 		this.numero = numero;
+		this.nom = nom;
+		this.pourAdulte = pourAdulte;
 	}
 	@Override
 	public int numero() {
@@ -28,11 +33,31 @@ public class DVD implements Document{
 	}
 
 	@Override
-	public void retour() {
-		this.setDisponibilite(true);
-		
+	public Boolean verifReservation(Abonne ab) {
+		if(this.ab.getNumero() == ab.getNumero()) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
+	@Override
+	public String getNom() {
+		return this.nom;
+	}
+	
+	@Override
+	public Boolean getPourAdulte() {
+		return pourAdulte;
+	}
+	
+	@Override
+	public void retour() {
+		this.setDisponibilite(true);
+	}
+	
+	@Override
 	public Boolean getDisponibilite() {
 		return disponibilite;
 	}
