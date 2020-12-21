@@ -52,6 +52,7 @@ public class ApplicationClient {
 			  System.out.print("->");
 			  idAbonne = clavierClient.readLine();
 			  
+			  
 			  System.out.println("Tapez ID du document");
 			  System.out.print("->");
 			  idDoc = clavierClient.readLine();
@@ -125,16 +126,11 @@ public class ApplicationClient {
 			  // Informe l'utilisateur de la connection
 			  System.out.println("Connecté au serveur " + socket.getInetAddress() + ":"+ socket.getPort());
 			  
-			  System.out.println("Tapez votre ID");
-			  System.out.print("->");
-			  idAbonne = clavierClient.readLine();
-			  
 			  System.out.println("Tapez ID du document");
 			  System.out.print("->");
 			  idDoc = clavierClient.readLine();
 			  
 			  // envoie au serveur
-			  sout.println(idAbonne);
 			  sout.println(idDoc);
 			  
 			  // lit la réponse provenant du serveur

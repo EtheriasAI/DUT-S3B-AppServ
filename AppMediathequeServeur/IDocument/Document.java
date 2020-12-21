@@ -10,9 +10,6 @@ public interface Document {
 	void reservationPour(Abonne ab) throws ReservationException ;
 	void empruntPar(Abonne ab) throws EmpruntException;
 	
-	//verifie si l'abonne a reserver le produit
-	Boolean verifReservation(Abonne ab);
-	
 	//verifie si le produit est pour les adultes
 	Boolean getPourAdulte();
 	

@@ -33,16 +33,6 @@ public class DVD implements Document{
 	}
 
 	@Override
-	public Boolean verifReservation(Abonne ab) {
-		if(this.ab.getNumero() == ab.getNumero()) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-	
-	@Override
 	public String getNom() {
 		return this.nom;
 	}
