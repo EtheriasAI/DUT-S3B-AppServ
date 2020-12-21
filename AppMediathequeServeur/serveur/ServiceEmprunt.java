@@ -45,7 +45,6 @@ public class ServiceEmprunt implements Runnable {
 		return null;
 	}
 	
-	
 	@Override
 	public void run() {
 
@@ -67,12 +66,6 @@ public class ServiceEmprunt implements Runnable {
 			}
 			
 			else if((doc.getDisponibilite() == true) && (doc.getPourAdulte() == false)) {
-				out.println(ab.getNom() + " a emprunte " + doc.getNom());
-				doc.empruntPar(ab);
-			}
-			
-			else if((doc.verifReservation(ab) == true)) {
-				doc.retour();
 				out.println(ab.getNom() + " a emprunte " + doc.getNom());
 				doc.empruntPar(ab);
 			}

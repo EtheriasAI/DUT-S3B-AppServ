@@ -43,13 +43,13 @@ public class ServiceRetour implements Runnable {
 			int idDocument = Integer.parseInt(in.readLine());
 			Document doc = getDocument(idDocument);
 			
-			System.out.print("ok " + doc);
-			out.println(doc.numero());
-
-			doc.retour();
+			if(doc.getDisponibilite() == true) {
+				out.println("Le produit " + doc.getNom() + "(" + doc.numero() + ") est deja dispo");
+			}else {
+				out.println("retour du produit : " + doc.getNom() + "(" + doc.numero() + ")");
+				doc.retour();	
+			}
 			
-		} catch (IOException e) {
-			
-		}
+		} catch (IOException e) {}
 	}
 }
