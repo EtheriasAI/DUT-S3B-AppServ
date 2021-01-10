@@ -1,19 +1,24 @@
 package produit;
 
-import IDocument.Document;
 
 public class ReservationException  extends Exception{
 	private static final long serialVersionUID = 1L;
 	
-	private Document produit;
+	private String message;	//message d'erreur
+	private int n;			//numero d'erreur
 
-	public ReservationException(DVD produit, int nbPlaces) {
-		this.produit = produit;
+	/*
+	 * @param in String m : message d'erreur
+	 */
+	public ReservationException(int n,String m) {
+		this.message = m;
+		this.n=n;
 	}
 
+	//@return message d'erreur
 	@Override
 	public String toString() {
-		return "Désolé, le produit " + produit.numero() + " est deja reserve";
+		return  "Erreur reservation n°"+ n +" <-- " + message;
 	}
 	
 }
