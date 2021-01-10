@@ -1,20 +1,23 @@
 package produit;
 
-import IDocument.Document;
 
 public class EmpruntException extends Exception {
 
 	private static final long serialVersionUID = 1L;
+	//message d'erreur
+	private String message;
 
-	private Document produit;
-
-	public EmpruntException(Document produit, int nbPlaces) {
-		this.produit = produit;
+	/*
+	 * @param in String m : message d'erreur
+	 */
+	public EmpruntException(String m) {
+		this.message = m;
 	}
 
+	//@return message d'erreur
 	@Override
 	public String toString() {
-		return "Désolé, le produit " + produit.numero() + "est deja emprunte";
+		return "\nErreur emprut <-- " + message;
 	}
-	
+		
 }
